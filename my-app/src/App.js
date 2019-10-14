@@ -3,7 +3,7 @@
  * @Author: chzh
  * @Date: 2019-10-12 11:01:06
  * @LastEditors: chzh
- * @LastEditTime: 2019-10-14 15:03:46
+ * @LastEditTime: 2019-10-14 18:39:08
  */
 import React from 'react';
 import './App.css';
@@ -38,6 +38,8 @@ class TodoList extends React.Component {
 
     addNewItem() {
         let input = document.getElementById('inputItem').value;
+        document.getElementById('inputItem').value = '';
+
         let all = this.state.items;
         let id = this.state.items.length;
 
@@ -118,6 +120,7 @@ class TodoList extends React.Component {
                                         item={item}
                                         // 这里不写key的话会报错
                                         key={index}
+
                                         changeStatus={(id) => this.handleChangeStatus(id)}
                                         itemDelete={(id) => this.handleItemDelete(id)}
                                     />

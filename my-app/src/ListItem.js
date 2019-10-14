@@ -3,7 +3,7 @@
  * @Author: chzh
  * @Date: 2019-10-14 09:07:20
  * @LastEditors: chzh
- * @LastEditTime: 2019-10-14 14:55:03
+ * @LastEditTime: 2019-10-14 19:21:01
  */
 import React from 'react';
 import './App.css';
@@ -36,7 +36,6 @@ class ListItem extends React.Component {
 
         return (
             <div className="item">
-                {/*  TODO:style瞎写的 */}
                 {/* li的key */}
                 <li key={item.id} style={itemStyle}>
                     {/* span：行内组合 */}
@@ -45,9 +44,14 @@ class ListItem extends React.Component {
                         style={{ backgroundColor: item.status === 0 ? '#fff' : '#A1EAFB' }}
                     ></span>
                     <span>
-                        <button onClick={() => this.props.changeStatus(item.id)}>
+                        {/* <button onClick={() => this.props.changeStatus(item.id)}>
                             {"done"}
-                        </button>
+                        </button> */}
+                        <input
+                            type="checkbox"
+                            defaultChecked={item.status}
+                            onClick={() => this.props.changeStatus(item.id)}
+                        />
                     </span>
                     <span>
                         {item.value}

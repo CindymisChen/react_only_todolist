@@ -3,14 +3,13 @@
  * @Author: chzh
  * @Date: 2019-10-14 09:07:20
  * @LastEditors: chzh
- * @LastEditTime: 2019-10-14 14:44:03
+ * @LastEditTime: 2019-10-14 19:20:50
  */
 import React from 'react';
 import './App.css';
 
 // 添加todo的输入框和按钮
 class InputTodo extends React.Component {
-
     constructor(props) {
         // 期待传入的props：
         // addNewItem(newItem)
