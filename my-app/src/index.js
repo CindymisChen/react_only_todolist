@@ -1,0 +1,20 @@
+/*
+ * @Description: 把组件注入dom
+ * @Author: chzh
+ * @Date: 2019-10-12 11:01:06
+ * @LastEditors: chzh
+ * @LastEditTime: 2019-10-14 09:23:02
+ */
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import TodoList from './App';
+import * as serviceWorker from './serviceWorker';
+
+ReactDOM.render(<TodoList />, document.getElementById('root'));
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
